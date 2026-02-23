@@ -6,3 +6,4 @@ drf-yasg==1.21.14
 psycopg2-binary==2.9.11
 gunicorn==22.0.0
 whitenoise==6.7.0
+Pillow==11.1.0
