@@ -183,18 +183,8 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
 }
 
-# CORS Configuration
-CORS_ALLOWED_ORIGINS = env_list(
-    "CORS_ALLOWED_ORIGINS",
-    [
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://localhost:3000",
-        "http://localhost",
-        "http://127.0.0.1",
-        "http://gkgo0o48wgo08sk0ogo48gss.62.171.157.196.sslip.io",
-    ],
-)
+# CORS Configuration — allow all origins since frontend calls backend directly
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = env_list(
