@@ -192,6 +192,7 @@ CORS_ALLOWED_ORIGINS = env_list(
         "http://localhost:3000",
         "http://localhost",
         "http://127.0.0.1",
+        "http://gkgo0o48wgo08sk0ogo48gss.62.171.157.196.sslip.io",
     ],
 )
 CORS_ALLOW_CREDENTIALS = True
@@ -204,6 +205,7 @@ CSRF_TRUSTED_ORIGINS = env_list(
         "http://localhost:3000",
         "http://localhost",
         "http://127.0.0.1",
+        "http://gkgo0o48wgo08sk0ogo48gss.62.171.157.196.sslip.io",
     ],
 )
 
