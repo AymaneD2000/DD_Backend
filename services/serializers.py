@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ServiceQuote, Installation, MaintenanceContract
+from .models import ServiceQuote, Installation, MaintenanceContract, Service
 
 class ServiceQuoteSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,4 +20,9 @@ class InstallationSerializer(serializers.ModelSerializer):
 class MaintenanceContractSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaintenanceContract
+        fields = '__all__'
+
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Service
         fields = '__all__'

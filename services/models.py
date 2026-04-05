@@ -56,3 +56,22 @@ class MaintenanceContract(models.Model):
     
     def __str__(self):
         return f"Maintenance: {self.equipment_type} ({self.serial_number})"
+
+
+class Service(models.Model):
+    """Simple service catalog entry for the frontend service portfolio."""
+    CATEGORY_CHOICES = (
+        ('devis', 'Devis'),
+        ('réparation', 'Réparation'),
+        ('entretien', 'Entretien'),
+        ('installation', 'Installation'),
+    )
+
+    name = models.CharField(max_length=200)
+    description = models.TextField(blank=True, default='')
+    price = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='devis')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} ({self.category})"
